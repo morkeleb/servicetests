@@ -90,7 +90,7 @@ class ServiceTestCase(unittest.TestCase):
       super(URLFetchServiceStub, self).__init__(service_name)
     
     def _RetrieveURL(self, url, payload, method, headers, request, response,
-                   follow_redirects=True, deadline=_API_CALL_DEADLINE):
+                   follow_redirects=True, deadline=_API_CALL_DEADLINE, validate_certificate=False):
       
       response.set_content(self.responses[url])
       
